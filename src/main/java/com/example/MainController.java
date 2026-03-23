@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.ArrayList;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -45,8 +47,12 @@ public class MainController {
         this.cityCol.setCellValueFactory(new PropertyValueFactory<>("city"));
         this.salaryCol.setCellValueFactory(new PropertyValueFactory<>("salary"));
 
-        this.empTable.getItems().add(
-            new Employee(1, "Erős István", "Szeged", 395));
+        // this.empTable.getItems().add(new Employee(1, "Erős István", "Szeged", 395));
+        ArrayList<Employee> empList = new ArrayList<>();
+        empList.add(new Employee(1, "Erős István", "Szeged", 395));
+        empList.add(new Employee(2, "Tám Árpád", "Pécs", 398));
+        empList.add(new Employee(3, "Lén Benedek", "Szeged", 395));
+        this.empTable.getItems().addAll(empList);
     }
 
 
