@@ -52,7 +52,7 @@ public class MainController {
 
     @FXML
     void onClickAddButton(ActionEvent event) {
-        System.out.println("műkszik...");
+        System.out.println("Hozzáadás...");
          this.empTable.getItems().add(
             new Employee(
                 Integer.parseInt(idField.getText()), 
